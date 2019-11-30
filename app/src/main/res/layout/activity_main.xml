@@ -31,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
             android:text="D" />
 
         <Button
@@ -38,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:layout_weight="1"
+            android:background="@android:color/holo_blue_dark"
             android:text="E" />
 
         <Button
@@ -88,5 +90,24 @@
             android:layout_height="200dp"
             android:layout_weight="1"
             android:text="E" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="80dp">
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:text="Button" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

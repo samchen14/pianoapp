@@ -32,7 +32,7 @@
             android:layout_height="200dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:text="Rachel" />
+            android:text="Rdf" />
 
         <Button
             android:id="@+id/button3"
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:layout_weight="1"
-            android:text="sam" />
+            android:text="asd" />
 
         <Button
             android:id="@+id/button5"

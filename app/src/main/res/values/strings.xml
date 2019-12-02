@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">pianoapp</string>
+    <string name="white_keys">White Keys</string>
+    <string name="back">Back</string>
+    <string name="black_keys">Black Keys</string>
+    <string name="shadow_color">Shadow Color</string>
+    <string name="page_title">page title</string>
+    <string name="settings">Settings</string>
 </resources>

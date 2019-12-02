@@ -43,11 +43,7 @@
                 android:id="@+id/colorPickerView1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                app:actionMode="last"
-                app:alpha_flag="0.2"
-                app:alpha_selector="0.2"
                 app:palette="@drawable/palette"
-                app:preferenceName="MyColorPicker"
                 app:selector="@drawable/wheel" />
         </LinearLayout>
 
@@ -67,11 +63,7 @@
                 android:id="@+id/colorPickerView2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                app:actionMode="last"
-                app:alpha_flag="0.2"
-                app:alpha_selector="0.2"
                 app:palette="@drawable/palette"
-                app:preferenceName="MyColorPicker"
                 app:selector="@drawable/wheel" />
         </LinearLayout>
 
@@ -91,11 +83,7 @@
                 android:id="@+id/colorPickerView3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                app:actionMode="last"
-                app:alpha_flag="0.2"
-                app:alpha_selector="0.2"
                 app:palette="@drawable/palette"
-                app:preferenceName="MyColorPicker"
                 app:selector="@drawable/wheel" />
         </LinearLayout>
 

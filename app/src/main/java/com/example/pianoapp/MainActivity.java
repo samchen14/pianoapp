@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE); // horizontal orientation
-        setContentView(R.layout.keyboard);
+        setContentView(R.layout.activity_main);
         Button play = findViewById(R.id.piano);
         Button theory = findViewById(R.id.theory);
         Button settings = findViewById(R.id.setting);

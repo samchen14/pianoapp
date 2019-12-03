@@ -11,11 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Keyboard extends AppCompatActivity {
     private SoundPool soundPool;
     private int keyMidC, keyMidB, keyMidE, keyMidF, keyMidG, keyA;
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-=======
->>>>>>> 1f16a705cb4423b42b765be099942296b96aa5cc
+//    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+//=======
+//>>>>>>> 1f16a705cb4423b42b765be099942296b96aa5cc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +73,7 @@ public class Keyboard extends AppCompatActivity {
 
             }
         });
-<<<<<<< HEAD
+//<<<<<<< HEAD
     }
 
 }
@@ -96,11 +96,3 @@ public class Keyboard extends AppCompatActivity {
 //        }
 //
 //        return super.onOptionsItemSelected(item);
-=======
-
-
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-}
->>>>>>> 1f16a705cb4423b42b765be099942296b96aa5cc

@@ -2,6 +2,7 @@ package com.example.pianoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -21,18 +22,20 @@ public class MainActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                playPiano();
             }
         });
         theory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                learnTheory();
 
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                changeSettings();
 
             }
         });
@@ -46,6 +49,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void playPiano() {
+        Intent intent = new Intent(this, Keyboard.class);
+        startActivity(intent);
+
+    }
+    private void learnTheory() {
+        Intent intent = new Intent(this, Learn.class);
+        startActivity(intent);
+
+    }
+    private void changeSettings() {
+        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
 
     }
 }

@@ -81,7 +81,7 @@ public class Keyboard extends AppCompatActivity {
 
         if (id == android.R.id.home) {
             this.finish();
-        }
+
         return super.onOptionsItemSelected(item);
     }
 

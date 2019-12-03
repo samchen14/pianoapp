@@ -3,17 +3,14 @@ package com.example.pianoapp;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Keyboard extends AppCompatActivity {
     private SoundPool soundPool;
     private int keyMidC, keyMidB, keyMidE, keyMidF, keyMidG, keyA;
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,9 +22,11 @@ public class Keyboard extends AppCompatActivity {
         Button midG = findViewById(R.id.button9);
         Button A = findViewById(R.id.button10);
 
-        soundPool = new SoundPool.Builder().setMaxStreams(5).build();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            soundPool = new SoundPool.Builder().setMaxStreams(5).build();
+        }
 
-        keyMidB = soundPool.load(this, R.id.button5, 1);
+        keyMidB = soundPool.load(this, R.raw.midb, 1);
         midC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,7 +37,7 @@ public class Keyboard extends AppCompatActivity {
         midD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                soundPool.play(keyMidB, 1, 1, 0, 0, 1);
             }
         });
 
@@ -71,19 +70,7 @@ public class Keyboard extends AppCompatActivity {
         });
 
 
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == android.R.id.home) {
-            this.finish();
-
-
-    }
-
-        return super.onOptionsItemSelected(item);
 }

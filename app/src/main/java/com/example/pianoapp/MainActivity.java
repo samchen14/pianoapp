@@ -1,11 +1,11 @@
 package com.example.pianoapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void playPiano() {
+    /*private void playPiano() {
 
-    }
+    }*/
 }

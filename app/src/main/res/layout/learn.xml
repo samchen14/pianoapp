@@ -17,7 +17,7 @@
             android:id="@+id/button20"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/learnBack" />
+            android:text="Back" />
 
         <TextView
             android:id="@+id/textView3"
@@ -163,20 +163,4 @@
         </LinearLayout>
 
     </ScrollView>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="WWW.CODEISALL.COM"
-        android:gravity="center"
-        android:layout_marginTop="30dp"
-        android:textSize="25sp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="is all about code"
-        android:gravity="center"
-        android:textSize="22sp"/>
-
 </LinearLayout>

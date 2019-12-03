@@ -1,12 +1,17 @@
 package com.example.pianoapp;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+=======
+>>>>>>> 1f16a705cb4423b42b765be099942296b96aa5cc
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+<<<<<<< HEAD
     private void playPiano() {
         Intent intent = new Intent(this, Keyboard.class);
         startActivity(intent);
@@ -61,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
     private void changeSettings() {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
+=======
+    /*private void playPiano() {
+>>>>>>> 1f16a705cb4423b42b765be099942296b96aa5cc
 
-    }
+    }*/
 }

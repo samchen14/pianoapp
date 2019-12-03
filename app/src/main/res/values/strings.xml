@@ -6,4 +6,6 @@
     <string name="shadow_color">Shadow Color</string>
     <string name="page_title">page title</string>
     <string name="settings">Settings</string>
+    <string name="button">Button</string>
+    <string name="learnBack">learnBack</string>
 </resources>

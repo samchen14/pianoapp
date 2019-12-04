@@ -4,7 +4,6 @@ import android.content.pm.ActivityInfo;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,68 +27,13 @@ public class Keyboard extends AppCompatActivity {
             soundPool = new SoundPool.Builder().setMaxStreams(5).build();
         }
 
-        keyMidB = soundPool.load(this, R.raw.midb, 1);
-        midC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        keyMidC = soundPool.load(this, R.raw.midc, 1);
+        midC.setOnClickListener(unused -> soundPool.play(keyMidC, 1, 1,
+                0, 0, 1));
 
-            }
-        });
-
-        midD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                soundPool.play(keyMidB, 1, 1, 0, 0, 1);
-            }
-        });
-
-        midE.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-        midF.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-        midG.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-        A.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-//<<<<<<< HEAD
     }
 
 }
 
 
 
-
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        }
-//
-//        @Override
-//        public boolean onOptionsItemSelected(MenuItem item) {
-//            int id = item.getItemId();
-//
-//            if (id == android.R.id.home) {
-//                this.finish();
-//
-//
-//        }
-//
-//        return super.onOptionsItemSelected(item);

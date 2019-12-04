@@ -1,5 +1,6 @@
 package com.example.pianoapp;
 
+import android.content.pm.ActivityInfo;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,14 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Keyboard extends AppCompatActivity {
     private SoundPool soundPool;
     private int keyMidC, keyMidB, keyMidE, keyMidF, keyMidG, keyA;
-//<<<<<<< HEAD
-
-//    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-//=======
-//>>>>>>> 1f16a705cb4423b42b765be099942296b96aa5cc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE); // horizontal orientation
         setContentView(R.layout.keyboard);
         Button midC = findViewById(R.id.button5);
         Button midD = findViewById(R.id.button6);

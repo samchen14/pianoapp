@@ -1,11 +1,6 @@
 package com.example.pianoapp;
 
-//<<<<<<< HEAD
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-//=======
-//>>>>>>> 1f16a705cb4423b42b765be099942296b96aa5cc
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE); // horizontal orientation
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); // horizontal orientation
         setContentView(R.layout.activity_main);
         Button play = findViewById(R.id.piano);
         Button theory = findViewById(R.id.theory);
@@ -53,9 +48,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//<<<<<<< HEAD
     private void playPiano() {
-        Intent intent = new Intent(this, Keyboard.class);
+        Intent intent = new Intent(MainActivity.this, Keyboard.class);
         startActivity(intent);
 
     }
@@ -68,9 +62,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
-//=======
-    /*private void playPiano() {
->>>>>>> 1f16a705cb4423b42b765be099942296b96aa5cc
-
-    }*/
 }

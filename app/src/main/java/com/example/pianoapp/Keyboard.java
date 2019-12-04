@@ -32,5 +32,10 @@ public class Keyboard extends AppCompatActivity {
 
         midC.setOnClickListener(unused -> soundPool.play(keyMidC, 1, 1,
                 0, 0, 1));
+
+
     }
+
+
+
 }

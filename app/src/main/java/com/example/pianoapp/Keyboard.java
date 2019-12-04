@@ -28,7 +28,7 @@ public class Keyboard extends AppCompatActivity {
             soundPool = new SoundPool.Builder().setMaxStreams(5).build();
         }
 
-        keyMidB = soundPool.load(this, R.raw.midb, 1);
+        keyMidC = soundPool.load(this, R.raw.midc, 1);
         midC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,20 +76,3 @@ public class Keyboard extends AppCompatActivity {
 }
 
 
-
-
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        }
-//
-//        @Override
-//        public boolean onOptionsItemSelected(MenuItem item) {
-//            int id = item.getItemId();
-//
-//            if (id == android.R.id.home) {
-//                this.finish();
-//
-//
-//        }
-//
-//        return super.onOptionsItemSelected(item);

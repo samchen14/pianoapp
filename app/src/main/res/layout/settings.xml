@@ -40,7 +40,7 @@
                 android:text="@string/white_keys" />
 
             <com.skydoves.colorpickerview.ColorPickerView
-                android:id="@+id/colorPickerView1"
+                android:id="@+id/wKeyColorPicker"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:palette="@drawable/palette"
@@ -60,7 +60,7 @@
                 android:text="@string/black_keys" />
 
             <com.skydoves.colorpickerview.ColorPickerView
-                android:id="@+id/colorPickerView2"
+                android:id="@+id/bKeyColorPicker"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:palette="@drawable/palette"
@@ -80,7 +80,7 @@
                 android:text="@string/shadow_color" />
 
             <com.skydoves.colorpickerview.ColorPickerView
-                android:id="@+id/colorPickerView3"
+                android:id="@+id/sColorPicker"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:palette="@drawable/palette"

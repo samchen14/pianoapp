@@ -12,5 +12,12 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); // horizontal orientation
         setContentView(R.layout.settings);
+
+        /*ColorPickerView.setColorListener(new ColorListener() {
+            @Override
+            public void onColorSelected(int color, boolean fromUser) {
+
+            }
+        });*/
     }
 }

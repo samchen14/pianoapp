@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Keyboard extends AppCompatActivity {
     private SoundPool soundPool;
     private int keyMidC, keyMidB, keyMidE, keyMidF, keyMidG, keyA;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,12 +29,13 @@ public class Keyboard extends AppCompatActivity {
         }
 
         keyMidC = soundPool.load(this, R.raw.midc, 1);
+
         midC.setOnClickListener(unused -> soundPool.play(keyMidC, 1, 1,
                 0, 0, 1));
 
+
     }
 
+
+
 }
-
-
-

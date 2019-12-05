@@ -2,6 +2,7 @@ package com.example.pianoapp;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,12 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
+    private int blackKeyColor;
+
+    private int whiteKeyColor;
+
+    private int shadingColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
         Button theory = findViewById(R.id.theory);
         Button settings = findViewById(R.id.setting);
         Button close = findViewById(R.id.quit);
+        Intent i = getIntent();
+        whiteKeyColor = i.getIntExtra("wColor", Color.WHITE);
+        blackKeyColor = i.getIntExtra("bColor", Color.BLACK);
+        shadingColor = i.getIntExtra("sColor", Color.BLUE);
+        System.out.println(whiteKeyColor);
+        System.out.println(blackKeyColor);
+        System.out.println(shadingColor);
+
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void playPiano() {
         Intent intent = new Intent(MainActivity.this, Keyboard.class);
+        intent.putExtra("wColor", whiteKeyColor);
+        intent.putExtra("bColor", blackKeyColor);
+        intent.putExtra("sColor", shadingColor);
         startActivity(intent);
 
     }

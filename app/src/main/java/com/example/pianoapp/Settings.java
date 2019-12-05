@@ -1,23 +1,67 @@
 package com.example.pianoapp;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.skydoves.colorpickerview.ColorEnvelope;
+import com.skydoves.colorpickerview.ColorPickerView;
+import com.skydoves.colorpickerview.listeners.ColorEnvelopeListener;
+
 public class Settings extends AppCompatActivity {
-    private int keyMidC, keyMidB, keyMidE, keyMidF, keyMidG, keyA;
+    private int wKey;
+    private int bKey;
+    private int shade;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); // horizontal orientation
         setContentView(R.layout.settings);
-
-        /*ColorPickerView.setColorListener(new ColorListener() {
+        ColorPickerView whiteKey = findViewById(R.id.wKeyColorPicker);
+        whiteKey.setColorListener(new ColorEnvelopeListener() {
             @Override
-            public void onColorSelected(int color, boolean fromUser) {
-
+            public void onColorSelected(ColorEnvelope envelope, boolean fromUser) {
+                TextView white = findViewById(R.id.whiteKeys);
+                white.setText("White Keys: #" + envelope.getHexCode());
+                wKey = envelope.getColor();
             }
-        });*/
+        });
+        ColorPickerView blackKey = findViewById(R.id.bKeyColorPicker);
+        blackKey.setColorListener(new ColorEnvelopeListener() {
+            @Override
+            public void onColorSelected(ColorEnvelope envelope, boolean fromUser) {
+                TextView black = findViewById(R.id.blackKeys);
+                black.setText("Black Keys: #" + envelope.getHexCode());
+                bKey = envelope.getColor();
+            }
+        });
+
+        ColorPickerView shadow = findViewById(R.id.sColorPicker);
+
+        shadow.setColorListener(new ColorEnvelopeListener() {
+            @Override
+            public void onColorSelected(ColorEnvelope envelope, boolean fromUser) {
+                TextView shading = findViewById(R.id.shadowColor);
+                shading.setText("Shadow Color: #" + envelope.getHexCode());
+                shade = envelope.getColor();
+            }
+        });
+
+        Button change = findViewById(R.id.submit);
+        change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Settings.this, MainActivity.class);
+                intent.putExtra("wColor", wKey);
+                intent.putExtra("bColor", bKey);
+                intent.putExtra("sColor", shade);
+                startActivity(intent);
+            }
+        });
     }
 }

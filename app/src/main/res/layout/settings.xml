@@ -24,7 +24,7 @@
     <LinearLayout
         android:id="@+id/Colors"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
@@ -44,7 +44,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:palette="@drawable/palette"
-                app:selector="@drawable/wheel" />
+                app:selector="@drawable/wheel" >
+
+            </com.skydoves.colorpickerview.ColorPickerView>
+
         </LinearLayout>
 
         <LinearLayout
@@ -88,4 +91,10 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apply_changes" />
 </LinearLayout>

@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Keyboard extends AppCompatActivity {
     private SoundPool soundPool;
-    private int keyMidC, keyMidB, keyMidE, keyMidF, keyMidG, keyA;
+    private int keyMidC, keyMidCSharp, keyMidD, keyMidDSharp, keyMidE, keyMidESharp, keyMidF, keyMidG, keyA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,24 +61,61 @@ public class Keyboard extends AppCompatActivity {
         Button seconddsharp = findViewById(R.id.button28);
         seconddsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
 
-        Button midC = findViewById(R.id.button5);
-        Button midD = findViewById(R.id.button6);
-        Button midE = findViewById(R.id.button7);
-        Button midF = findViewById(R.id.button8);
-        Button midG = findViewById(R.id.button9);
-        Button A = findViewById(R.id.button10);
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             soundPool = new SoundPool.Builder().setMaxStreams(5).build();
         }
 
         keyMidC = soundPool.load(this, R.raw.midc, 1);
+        keyMidCSharp = soundPool.load(this, R.raw.midcsharp, 1);
+        keyMidD = soundPool.load(this, R.raw.midd, 1);
+        keyMidDSharp = soundPool.load(this, R.raw.middsharp, 1);
+        keyMidE = soundPool.load(this, R.raw.mide, 1);
 
-        midC.setOnClickListener(new View.OnClickListener() {
+        firstc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                midC.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                firstc.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                 soundPool.play(keyMidC, 1, 1,
+                        0, 0, 1);
+                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            }
+        });
+
+        firstcsharp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firstcsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                soundPool.play(keyMidCSharp, 1, 1,
+                        0, 0, 1);
+                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            }
+        });
+
+        firstd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firstd.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                soundPool.play(keyMidD, 1, 1,
+                        0, 0, 1);
+                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            }
+        });
+
+        firstdsharp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firstdsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                soundPool.play(keyMidD, 1, 1,
+                        0, 0, 1);
+                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            }
+        });
+
+        firste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firste.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                soundPool.play(keyMidE, 1, 1,
                         0, 0, 1);
                 //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
             }

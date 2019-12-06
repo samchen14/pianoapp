@@ -41,10 +41,10 @@
 
             <com.skydoves.colorpickerview.ColorPickerView
                 android:id="@+id/wKeyColorPicker"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 app:palette="@drawable/palette"
-                app:selector="@drawable/wheel" >
+                app:selector="@drawable/wheel">
 
             </com.skydoves.colorpickerview.ColorPickerView>
 
@@ -64,8 +64,8 @@
 
             <com.skydoves.colorpickerview.ColorPickerView
                 android:id="@+id/bKeyColorPicker"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 app:palette="@drawable/palette"
                 app:selector="@drawable/wheel" />
         </LinearLayout>
@@ -84,13 +84,19 @@
 
             <com.skydoves.colorpickerview.ColorPickerView
                 android:id="@+id/sColorPicker"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 app:palette="@drawable/palette"
                 app:selector="@drawable/wheel" />
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Colors" />
 
     <Button
         android:id="@+id/submit"

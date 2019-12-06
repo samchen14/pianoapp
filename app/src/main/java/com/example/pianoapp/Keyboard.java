@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,7 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Keyboard extends AppCompatActivity {
     private SoundPool soundPool;
-    private int keyMidC, keyMidCSharp, keyMidD, keyMidDSharp, keyMidE, keyMidF, keyMidFSharp, keyMidG, keyMidGSharp, keyMidA, keyMidASharp, keyMidB;
+    private int keyMidC, keyMidCSharp, keyMidD, keyMidDSharp, keyMidE, keyMidF, keyMidFSharp,
+            keyMidG, keyMidGSharp, keyMidA, keyMidASharp, keyMidB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +75,6 @@ public class Keyboard extends AppCompatActivity {
         keyMidD = soundPool.load(this, R.raw.midd, 1);
         keyMidDSharp = soundPool.load(this, R.raw.middsharp, 1);
         keyMidE = soundPool.load(this, R.raw.mide, 1);
-
         keyMidF = soundPool.load(this, R.raw.midf, 1);
         keyMidFSharp = soundPool.load(this, R.raw.midfsharp,1);
         keyMidG = soundPool.load(this, R.raw.midg, 1);
@@ -82,7 +83,7 @@ public class Keyboard extends AppCompatActivity {
         keyMidASharp = soundPool.load(this, R.raw.midasharp, 1);
         keyMidB = soundPool.load(this, R.raw.midb, 1);
 
-        firstc.setOnClickListener(new View.OnClickListener() {
+        /*firstc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 firstc.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
@@ -90,115 +91,221 @@ public class Keyboard extends AppCompatActivity {
                         0, 0, 1);
                 //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
             }
-        });
+        });*/
 
-        firstcsharp.setOnClickListener(new View.OnClickListener() {
+        firstc.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                firstcsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidCSharp, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firstc.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidC, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firstc.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        break;
+                    default:
+                }
+                return false;
             }
         });
 
-        firstd.setOnClickListener(new View.OnClickListener() {
+        firstcsharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                firstd.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidD, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firstcsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidCSharp, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firstcsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+                        break;
+                    default:
+                }
+                return false;
             }
         });
 
-        firstdsharp.setOnClickListener(new View.OnClickListener() {
+        firstd.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                firstdsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidD, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firstd.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidD, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firstd.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        break;
+                    default:
+                }
+                return false;
             }
         });
 
-        firste.setOnClickListener(new View.OnClickListener() {
+        firstdsharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                firste.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidE, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firstdsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidDSharp, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firstdsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+                        break;
+                    default:
+                }
+                return false;
             }
         });
 
-        firstf.setOnClickListener(new View.OnClickListener() {
+        firste.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                firstf.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidF, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firste.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidE, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firste.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        break;
+                    default:
+                }
+                return false;
             }
         });
 
-        firstfsharp.setOnClickListener(new View.OnClickListener() {
+        firstf.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                firstfsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidFSharp, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firstf.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidF, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firstf.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        break;
+                    default:
+                }
+                return false;
             }
         });
 
-        firstg.setOnClickListener(new View.OnClickListener() {
+        firstfsharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                firstg.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidG, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firstfsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidFSharp, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firstfsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+                        break;
+                    default:
+                }
+                return false;
             }
         });
 
-        firstgsharp.setOnClickListener(new View.OnClickListener() {
+        firstg.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                firstgsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidGSharp, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firstg.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidG, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firstg.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        break;
+                    default:
+                }
+                return false;
             }
         });
 
-        firsta.setOnClickListener(new View.OnClickListener() {
+        firstgsharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                firsta.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidA, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firstgsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidGSharp, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firstgsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+                        break;
+                    default:
+                }
+                return false;
             }
         });
 
-        firstasharp.setOnClickListener(new View.OnClickListener() {
+        firsta.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                firstasharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidASharp, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firsta.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidA, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firsta.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        break;
+                    default:
+                }
+                return false;
             }
         });
 
-        firstb.setOnClickListener(new View.OnClickListener() {
+        firstasharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                firstb.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidB, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firstasharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidASharp, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firstasharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+                        break;
+                    default:
+                }
+                return false;
+            }
+        });
+
+        firstb.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        firstb.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        soundPool.play(keyMidB, 1, 1,
+                                0, 0, 1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        firstb.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        break;
+                    default:
+                }
+                return false;
             }
         });
 

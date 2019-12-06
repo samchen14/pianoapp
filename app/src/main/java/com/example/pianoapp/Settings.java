@@ -2,6 +2,7 @@ package com.example.pianoapp;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,6 +50,22 @@ public class Settings extends AppCompatActivity {
                 TextView shading = findViewById(R.id.shadowColor);
                 shading.setText("Shadow Color: #" + envelope.getHexCode());
                 shade = envelope.getColor();
+            }
+        });
+
+        Button reset = findViewById(R.id.reset);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                shade = Color.BLUE;
+                bKey = Color.BLACK;
+                wKey = Color.WHITE;
+                TextView shading = findViewById(R.id.shadowColor);
+                shading.setText("Shadow Color");
+                TextView black = findViewById(R.id.blackKeys);
+                black.setText("Black Keys");
+                TextView white = findViewById(R.id.whiteKeys);
+                white.setText("White Keys");
             }
         });
 

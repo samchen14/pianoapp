@@ -23,6 +23,8 @@ public class Keyboard extends AppCompatActivity {
         setContentView(R.layout.keyboard);
         Intent intent = getIntent();
 
+        Button backButton = findViewById(R.id.back);
+
         Button firstc = findViewById(R.id.button5);
         Button firstd = findViewById(R.id.button6);
         Button firste = findViewById(R.id.button7);
@@ -68,21 +70,20 @@ public class Keyboard extends AppCompatActivity {
         // Does setMaxStreams need to match the total number of keys?
 
 
-
         keyMidC = soundPool.load(this, R.raw.midc, 1);
         keyMidCSharp = soundPool.load(this, R.raw.midcsharp, 1);
         keyMidD = soundPool.load(this, R.raw.midd, 1);
         keyMidDSharp = soundPool.load(this, R.raw.middsharp, 1);
         keyMidE = soundPool.load(this, R.raw.mide, 1);
         keyMidF = soundPool.load(this, R.raw.midf, 1);
-        keyMidFSharp = soundPool.load(this, R.raw.midfsharp,1);
+        keyMidFSharp = soundPool.load(this, R.raw.midfsharp, 1);
         keyMidG = soundPool.load(this, R.raw.midg, 1);
         keyMidGSharp = soundPool.load(this, R.raw.midgsharp, 1);
         keyMidA = soundPool.load(this, R.raw.mida, 1);
         keyMidASharp = soundPool.load(this, R.raw.midasharp, 1);
         keyMidB = soundPool.load(this, R.raw.midb, 1);
         keyHighC = soundPool.load(this, R.raw.highc, 1);
-        keyHighCSharp= soundPool.load(this, R.raw.highcsharp, 1);
+        keyHighCSharp = soundPool.load(this, R.raw.highcsharp, 1);
         keyHighD = soundPool.load(this, R.raw.highd, 1);
         keyHighDSharp = soundPool.load(this, R.raw.highdsharp, 1);
         keyHighE = soundPool.load(this, R.raw.highe, 1);
@@ -101,7 +102,7 @@ public class Keyboard extends AppCompatActivity {
         firstc.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firstc.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidC, 1, 1,
@@ -119,7 +120,7 @@ public class Keyboard extends AppCompatActivity {
         firstcsharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firstcsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidCSharp, 1, 1,
@@ -137,7 +138,7 @@ public class Keyboard extends AppCompatActivity {
         firstd.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firstd.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidD, 1, 1,
@@ -155,7 +156,7 @@ public class Keyboard extends AppCompatActivity {
         firstdsharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firstdsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidDSharp, 1, 1,
@@ -173,7 +174,7 @@ public class Keyboard extends AppCompatActivity {
         firste.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firste.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidE, 1, 1,
@@ -191,7 +192,7 @@ public class Keyboard extends AppCompatActivity {
         firstf.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firstf.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidF, 1, 1,
@@ -209,7 +210,7 @@ public class Keyboard extends AppCompatActivity {
         firstfsharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firstfsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidFSharp, 1, 1,
@@ -227,7 +228,7 @@ public class Keyboard extends AppCompatActivity {
         firstg.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firstg.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidG, 1, 1,
@@ -245,7 +246,7 @@ public class Keyboard extends AppCompatActivity {
         firstgsharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firstgsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidGSharp, 1, 1,
@@ -263,7 +264,7 @@ public class Keyboard extends AppCompatActivity {
         firsta.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firsta.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidA, 1, 1,
@@ -281,7 +282,7 @@ public class Keyboard extends AppCompatActivity {
         firstasharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firstasharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidASharp, 1, 1,
@@ -299,7 +300,7 @@ public class Keyboard extends AppCompatActivity {
         firstb.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         firstb.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyMidB, 1, 1,
@@ -317,7 +318,7 @@ public class Keyboard extends AppCompatActivity {
         secondc.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         secondc.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyHighC, 1, 1,
@@ -335,7 +336,7 @@ public class Keyboard extends AppCompatActivity {
         secondcsharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         secondcsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyHighCSharp, 1, 1,
@@ -353,7 +354,7 @@ public class Keyboard extends AppCompatActivity {
         secondd.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         secondd.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyHighD, 1, 1,
@@ -371,7 +372,7 @@ public class Keyboard extends AppCompatActivity {
         seconddsharp.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         seconddsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyHighDSharp, 1, 1,
@@ -389,7 +390,7 @@ public class Keyboard extends AppCompatActivity {
         seconde.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         seconde.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyHighE, 1, 1,
@@ -407,7 +408,7 @@ public class Keyboard extends AppCompatActivity {
         secondf.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()) {
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         secondf.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
                         soundPool.play(keyHighF, 1, 1,
@@ -420,9 +421,22 @@ public class Keyboard extends AppCompatActivity {
                 }
                 return false;
             }
+
+
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goBack();
+
+            }
         });
     }
 
-
-
+    private void goBack() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

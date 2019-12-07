@@ -223,5 +223,13 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:text="@string/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

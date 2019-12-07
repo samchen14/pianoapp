@@ -1,8 +1,11 @@
 package com.example.pianoapp;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 
@@ -15,6 +18,16 @@ public class Learn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); // horizontal orientation
         setContentView(R.layout.learn);
+
+        Button backButton = findViewById(R.id.button20);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goBack();
+
+            }
+        });
     }
 
     public void expandableButton1(View view) {
@@ -36,4 +49,12 @@ public class Learn extends AppCompatActivity {
         expandableLayout4 = (ExpandableRelativeLayout) findViewById(R.id.expandableLayout4);
         expandableLayout4.toggle(); // toggle expand and collapse
     }
+
+
+    private void goBack() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
+

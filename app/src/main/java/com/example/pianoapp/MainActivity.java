@@ -69,15 +69,18 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("bColor", blackKeyColor);
         intent.putExtra("sColor", shadingColor);
         startActivity(intent);
+        finish();
 
     }
     private void learnTheory() {
         Intent intent = new Intent(this, Learn.class);
         startActivity(intent);
+        finish();
 
     }
     private void changeSettings() {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
+        finish();
     }
 }

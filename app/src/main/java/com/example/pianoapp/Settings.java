@@ -80,5 +80,21 @@ public class Settings extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button goBackNow = findViewById(R.id.button10);
+
+        goBackNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goBackNow();
+
+            }
+        });
+
+    }
+    private void goBackNow() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

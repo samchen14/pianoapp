@@ -51,7 +51,7 @@
             <com.github.aakira.expandablelayout.ExpandableRelativeLayout
                 android:id="@+id/expandableLayout1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/expandableButton1"
                 android:background="#03A4FD"
                 android:padding="16dp"
@@ -79,22 +79,10 @@
                 android:text="@string/reading_notes"
                 android:textColor="#fff" />
 
-            <Button
-                android:id="@+id/expandableButton3"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/expandableLayout2"
-                android:background="#80D8FF"
-                android:drawableRight="@android:drawable/arrow_down_float"
-                android:onClick="expandableButton3"
-                android:paddingRight="10dp"
-                android:text="Key Signatures and Accidentals"
-                android:textColor="#fff" />
-
             <com.github.aakira.expandablelayout.ExpandableRelativeLayout
                 android:id="@+id/expandableLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/expandableButton2"
                 android:background="#4FACFD"
                 android:padding="16dp"
@@ -106,9 +94,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Android Permission Model designed for preventing unauthorized access by third party application.Android applications must declare which permission they require after installation. At a time of android application installation android system display list of permissions which is required to install the current application. The user must decide to install an application or not."
+                    android:text="The traditional grand staff for piano has two staff; one for the right hand and one for the left. The staff for the right hand is on top of the left; and is in treble clef. The left hand staff is in bass clef. On the staff, notes are place either the lines or on the spaces, and each line and space represents a note. If composers want to create notes above or below the staff, they can add small ledger lines that extend the staff. In trebel clef, Middle C is on the ledger line that is one below the staff. From there, the D above middle C is on the space between the ledger line and the first line of the staff, and E is on the first line of the staff, and so on. In bass clef, Middle C is on the ledger line that is one above the highest line of the staff."
                     android:textColor="#FFFFFF" />
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            <Button
+                android:id="@+id/expandableButton3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expandableLayout2"
+                android:background="#80D8FF"
+                android:drawableRight="@android:drawable/arrow_down_float"
+                android:onClick="expandableButton3"
+                android:paddingRight="10dp"
+                android:text="Key Signatures and Accidentals"
+                android:textColor="#fff" />
 
             <com.github.aakira.expandablelayout.ExpandableRelativeLayout
                 android:id="@+id/expandableLayout3"
@@ -126,8 +126,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#FFFFFF"
-                    android:text="With the help of android debug bridge we can communicate with an emulator or connected physical android device because Android Debug Bridge is a command line tool. Android Debug Bridge is also known as ADB. ADB architecture is like client-server architecture with three components." />
-            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+                    android:text="On a staff, after the clef and before the time signature, one may see a collection of sharps (the # symbol) or flats (symbols that look like 'b') on various places of the staff. That is the Key Signature, which tells users which key they are playing in. Sharps and Flats, together called 'Accidentals', inform musicians to play a half step higher or lowers that the note it is placed with. For example, if I were to play C Sharp, I'd play the black key right after C. If i were to play E flat, I'd play the black key right below E. In certain circumstances, playing an accidental doesn't always imply playing a black key. Specifically, in the instances of B sharp, which is actually C, and E sharp, which is F. Likewise, C flat is B, and F flat is E. Since all keys other than C major and A minor require consistent usage of black keys, the key signature at the beginning of the staff represent keys that are to constanlty played sharp or flat unless otherwise marked."/>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
             <Button
                 android:id="@+id/expandableButton4"
@@ -157,8 +157,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#FFFFFF"
-                    android:text="The Open Handset Alliance (OHA) was formed in November 2007. The OHA is a business alliance comprised of many of the largest and most successful mobile companies on the planet. Its members include chip makers, handset manufacturers, software developers, and service providers.The entire mobile supply chain is well represented." />
-            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+                    android:text="The best way to improving piano skills are to continue practicing. There are many piano exercises that can be played to strengthen your fingers and practice fundamental playing skills. Carl Czerny and Charles Louis-Hanson are two composers whose piano exercises are very famous and commonly practiced. In addition, learning piano theory can help players better understand the pieces they play."/>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
         </LinearLayout>
 

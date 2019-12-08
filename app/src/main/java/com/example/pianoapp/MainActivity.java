@@ -74,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
     }
     private void learnTheory() {
         Intent intent = new Intent(this, Learn.class);
+        intent.putExtra("wColor", whiteKeyColor);
+        intent.putExtra("bColor", blackKeyColor);
+        intent.putExtra("sColor", shadingColor);
         startActivity(intent);
         finish();
 

@@ -9,4 +9,7 @@
     <string name="button">Button</string>
     <string name="learnBack">learnBack</string>
     <string name="apply_changes">Apply Changes</string>
+    <string name="time_signature">Time Signature</string>
+    <string name="reading_notes">Reading Notes</string>
+    <string name="time_signature_description">When listening to music, often you\'ll nod your head along with the beats. The beats are determined by a time signature. Time signatures are written as two numbers at the beginning of the staff line, one on top of the other. The number on the bottom defines the the duration of the beat as a fraction of a whole note. For example, if the number on the bottom is 4, it means that each quarter note counts as one beat. The number on top is the number of beats per measure. For example, the most common four-four time is written as a 4 on top of a 4, and it means that each quarter note is a beat, and there are four beats in a measure.</string>
 </resources>

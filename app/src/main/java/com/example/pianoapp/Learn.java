@@ -2,6 +2,7 @@ package com.example.pianoapp;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 
 public class Learn extends AppCompatActivity {
-
+    private int wColor;
+    private int bColor;
+    private int sColor;
     ExpandableRelativeLayout expandableLayout1, expandableLayout2, expandableLayout3, expandableLayout4;
 
     @Override
@@ -18,7 +21,10 @@ public class Learn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); // horizontal orientation
         setContentView(R.layout.learn);
-
+        Intent intent = getIntent();
+        wColor = intent.getIntExtra("wColor", Color.WHITE);
+        bColor = intent.getIntExtra("bColor", Color.BLACK);
+        sColor = intent.getIntExtra("sColor", Color.BLUE);
         Button backButton = findViewById(R.id.button20);
 
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +59,9 @@ public class Learn extends AppCompatActivity {
 
     private void goBack() {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("wColor", wColor);
+        intent.putExtra("bColor", bColor);
+        intent.putExtra("sColor", sColor);
         startActivity(intent);
         finish();
     }

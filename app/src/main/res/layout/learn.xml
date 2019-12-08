@@ -45,7 +45,7 @@
                 android:drawableRight="@android:drawable/arrow_down_float"
                 android:onClick="expandableButton1"
                 android:paddingRight="10dp"
-                android:text="Time Signature"
+                android:text="@string/time_signature"
                 android:textColor="#fff" />
 
             <com.github.aakira.expandablelayout.ExpandableRelativeLayout
@@ -64,7 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#FFFFFF"
-                    android:text="Android is an open source and Linux-based Operating System for mobile devices such as smartphones and tablet computers. Android was developed by the Open Handset Alliance, led by Google, and other companies. The first beta version of the Android Software Development Kit (SDK) was released by Google in 2007 where as the first commercial version, Android 1.0, was released in September 2008." />
+                    android:text="@string/time_signature_description"/>
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
             <Button
@@ -76,7 +76,19 @@
                 android:drawableRight="@android:drawable/arrow_down_float"
                 android:onClick="expandableButton2"
                 android:paddingRight="10dp"
-                android:text="Reading Notes"
+                android:text="@string/reading_notes"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/expandableButton3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expandableLayout2"
+                android:background="#80D8FF"
+                android:drawableRight="@android:drawable/arrow_down_float"
+                android:onClick="expandableButton3"
+                android:paddingRight="10dp"
+                android:text="Key Signatures and Accidentals"
                 android:textColor="#fff" />
 
             <com.github.aakira.expandablelayout.ExpandableRelativeLayout
@@ -94,21 +106,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="Android Permission Model designed for preventing unauthorized access by third party application.Android applications must declare which permission they require after installation. At a time of android application installation android system display list of permissions which is required to install the current application. The user must decide to install an application or not." />
+                    android:text="Android Permission Model designed for preventing unauthorized access by third party application.Android applications must declare which permission they require after installation. At a time of android application installation android system display list of permissions which is required to install the current application. The user must decide to install an application or not."
+                    android:textColor="#FFFFFF" />
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
-
-            <Button
-                android:id="@+id/expandableButton3"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/expandableLayout2"
-                android:background="#80D8FF"
-                android:drawableRight="@android:drawable/arrow_down_float"
-                android:onClick="expandableButton3"
-                android:paddingRight="10dp"
-                android:text="Key Signatures and Accidentals"
-                android:textColor="#fff" />
 
             <com.github.aakira.expandablelayout.ExpandableRelativeLayout
                 android:id="@+id/expandableLayout3"

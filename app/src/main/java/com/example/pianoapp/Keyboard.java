@@ -14,6 +14,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Keyboard extends AppCompatActivity {
     private SoundPool soundPool;
+    private int wColor;
+    private int bColor;
+    private int sColor;
+    private static final String whiteKeyColor = "whiteKeys";
+    private static final String blackKeyColor = "blackKeys";
+    private static final String keyShadingColor = "keyShading";
     private int keyMidC, keyMidCSharp, keyMidD, keyMidDSharp, keyMidE, keyMidF, keyMidFSharp, keyMidG, keyMidGSharp, keyMidA, keyMidASharp, keyMidB, keyHighC, keyHighCSharp, keyHighD, keyHighDSharp, keyHighE, keyHighF;
 
     @Override
@@ -36,33 +42,35 @@ public class Keyboard extends AppCompatActivity {
         Button secondd = findViewById(R.id.button14);
         Button seconde = findViewById(R.id.button15);
         Button secondf = findViewById(R.id.button16);
-
-        firstc.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
-        firstd.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
-        firste.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
-        firstf.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
-        firstg.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
-        firsta.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
-        firstb.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
-        secondc.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
-        secondd.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
-        seconde.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
-        secondf.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+        wColor = intent.getIntExtra("wColor", Color.WHITE);
+        bColor = intent.getIntExtra("bColor", Color.BLACK);
+        sColor = intent.getIntExtra("sColor", Color.BLUE);
+        firstc.setBackgroundColor(wColor);
+        firstd.setBackgroundColor(wColor);
+        firste.setBackgroundColor(wColor);
+        firstf.setBackgroundColor(wColor);
+        firstg.setBackgroundColor(wColor);
+        firsta.setBackgroundColor(wColor);
+        firstb.setBackgroundColor(wColor);
+        secondc.setBackgroundColor(wColor);
+        secondd.setBackgroundColor(wColor);
+        seconde.setBackgroundColor(wColor);
+        secondf.setBackgroundColor(wColor);
 
         Button firstcsharp = findViewById(R.id.button18);
-        firstcsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+        firstcsharp.setBackgroundColor(bColor);
         Button firstdsharp = findViewById(R.id.button19);
-        firstdsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+        firstdsharp.setBackgroundColor(bColor);
         Button firstfsharp = findViewById(R.id.button24);
-        firstfsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+        firstfsharp.setBackgroundColor(bColor);
         Button firstgsharp = findViewById(R.id.button25);
-        firstgsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+        firstgsharp.setBackgroundColor(bColor);
         Button firstasharp = findViewById(R.id.button26);
-        firstasharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+        firstasharp.setBackgroundColor(bColor);
         Button secondcsharp = findViewById(R.id.button27);
-        secondcsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+        secondcsharp.setBackgroundColor(bColor);
         Button seconddsharp = findViewById(R.id.button28);
-        seconddsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+        seconddsharp.setBackgroundColor(bColor);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             soundPool = new SoundPool.Builder().setMaxStreams(5).build();
@@ -89,27 +97,17 @@ public class Keyboard extends AppCompatActivity {
         keyHighE = soundPool.load(this, R.raw.highe, 1);
         keyHighF = soundPool.load(this, R.raw.highf, 1);
 
-        /*firstc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                firstc.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
-                soundPool.play(keyMidC, 1, 1,
-                        0, 0, 1);
-                //midC.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
-            }
-        });*/
-
         firstc.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firstc.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firstc.setBackgroundColor(sColor);
                         soundPool.play(keyMidC, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firstc.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        firstc.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -122,12 +120,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firstcsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firstcsharp.setBackgroundColor(sColor);
                         soundPool.play(keyMidCSharp, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firstcsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+                        firstcsharp.setBackgroundColor(bColor);
                         break;
                     default:
                 }
@@ -140,12 +138,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firstd.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firstd.setBackgroundColor(sColor);
                         soundPool.play(keyMidD, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firstd.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        firstd.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -158,12 +156,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firstdsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firstdsharp.setBackgroundColor(sColor);
                         soundPool.play(keyMidDSharp, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firstdsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+                        firstdsharp.setBackgroundColor(bColor);
                         break;
                     default:
                 }
@@ -176,12 +174,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firste.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firste.setBackgroundColor(sColor);
                         soundPool.play(keyMidE, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firste.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        firste.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -194,12 +192,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firstf.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firstf.setBackgroundColor(sColor);
                         soundPool.play(keyMidF, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firstf.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        firstf.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -212,12 +210,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firstfsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firstfsharp.setBackgroundColor(sColor);
                         soundPool.play(keyMidFSharp, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firstfsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+                        firstfsharp.setBackgroundColor(bColor);
                         break;
                     default:
                 }
@@ -230,12 +228,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firstg.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firstg.setBackgroundColor(sColor);
                         soundPool.play(keyMidG, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firstg.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        firstg.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -248,12 +246,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firstgsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firstgsharp.setBackgroundColor(sColor);
                         soundPool.play(keyMidGSharp, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firstgsharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+                        firstgsharp.setBackgroundColor(bColor);
                         break;
                     default:
                 }
@@ -266,12 +264,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firsta.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firsta.setBackgroundColor(sColor);
                         soundPool.play(keyMidA, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firsta.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        firsta.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -284,12 +282,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firstasharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firstasharp.setBackgroundColor(sColor);
                         soundPool.play(keyMidASharp, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firstasharp.setBackgroundColor(intent.getIntExtra("bColor", Color.BLACK));
+                        firstasharp.setBackgroundColor(bColor);
                         break;
                     default:
                 }
@@ -302,12 +300,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        firstb.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        firstb.setBackgroundColor(sColor);
                         soundPool.play(keyMidB, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        firstb.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        firstb.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -320,12 +318,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        secondc.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        secondc.setBackgroundColor(sColor);
                         soundPool.play(keyHighC, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        secondc.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        secondc.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -338,12 +336,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        secondcsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        secondcsharp.setBackgroundColor(sColor);
                         soundPool.play(keyHighCSharp, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        secondcsharp.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        secondcsharp.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -356,12 +354,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        secondd.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        secondd.setBackgroundColor(sColor);
                         soundPool.play(keyHighD, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        secondd.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        secondd.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -374,12 +372,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        seconddsharp.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        seconddsharp.setBackgroundColor(sColor);
                         soundPool.play(keyHighDSharp, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        seconddsharp.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        seconddsharp.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -392,12 +390,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        seconde.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        seconde.setBackgroundColor(sColor);
                         soundPool.play(keyHighE, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        seconde.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        seconde.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -410,12 +408,12 @@ public class Keyboard extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        secondf.setBackgroundColor(intent.getIntExtra("sColor", Color.BLUE));
+                        secondf.setBackgroundColor(sColor);
                         soundPool.play(keyHighF, 1, 1,
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        secondf.setBackgroundColor(intent.getIntExtra("wColor", Color.WHITE));
+                        secondf.setBackgroundColor(wColor);
                         break;
                     default:
                 }
@@ -436,6 +434,9 @@ public class Keyboard extends AppCompatActivity {
 
     private void goBack() {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("wColor", wColor);
+        intent.putExtra("bColor", bColor);
+        intent.putExtra("sColor", sColor);
         startActivity(intent);
         finish();
     }

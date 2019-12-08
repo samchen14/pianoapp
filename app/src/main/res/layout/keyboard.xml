@@ -23,7 +23,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:text="Button" />
+            android:text="C" />
 
         <Button
             android:id="@+id/button6"
@@ -31,7 +31,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:text="Button" />
+            android:text="D" />
 
         <Button
             android:id="@+id/button7"
@@ -39,7 +39,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:text="Button" />
+            android:text="E" />
 
         <Button
             android:id="@+id/button9"
@@ -47,7 +47,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:text="Button" />
+            android:text="F" />
 
         <Button
             android:id="@+id/button8"
@@ -55,7 +55,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:text="Button" />
+            android:text="G" />
 
         <Button
             android:id="@+id/button11"
@@ -63,7 +63,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:text="Button" />
+            android:text="A" />
 
         <Button
             android:id="@+id/button12"
@@ -71,7 +71,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:text="Button" />
+            android:text="B" />
 
         <Button
             android:id="@+id/button13"
@@ -79,7 +79,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:text="Button" />
+            android:text="C" />
 
         <Button
             android:id="@+id/button14"
@@ -87,7 +87,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:text="Button" />
+            android:text="D" />
 
         <Button
             android:id="@+id/button15"
@@ -95,7 +95,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:text="Button" />
+            android:text="E" />
 
         <Button
             android:id="@+id/button16"
@@ -103,7 +103,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:text="Button" />
+            android:text="F" />
 
     </LinearLayout>
 

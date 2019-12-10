@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/learn"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context="com.codeisall.expandablelayout.learn">
 
@@ -22,7 +22,7 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Basic Music Theory"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
@@ -34,7 +34,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <Button
@@ -113,7 +113,7 @@
             <com.github.aakira.expandablelayout.ExpandableRelativeLayout
                 android:id="@+id/expandableLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/expandableButton3"
                 android:background="#80D8FF"
                 android:padding="16dp"
@@ -144,7 +144,7 @@
             <com.github.aakira.expandablelayout.ExpandableRelativeLayout
                 android:id="@+id/expandableLayout4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/expandableButton4"
                 android:background="#B8EDFF"
                 android:padding="16dp"

@@ -19,7 +19,7 @@ public class Learn extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); // horizontal orientation
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE); // horizontal orientation
         setContentView(R.layout.learn);
         Intent intent = getIntent();
         wColor = intent.getIntExtra("wColor", Color.WHITE);

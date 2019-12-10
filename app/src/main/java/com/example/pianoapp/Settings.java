@@ -21,7 +21,7 @@ public class Settings extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); // horizontal orientation
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE); // horizontal orientation
         setContentView(R.layout.settings);
         ColorPickerView whiteKey = findViewById(R.id.wKeyColorPicker);
         whiteKey.setColorListener(new ColorEnvelopeListener() {
@@ -78,6 +78,7 @@ public class Settings extends AppCompatActivity {
                 intent.putExtra("bColor", bKey);
                 intent.putExtra("sColor", shade);
                 startActivity(intent);
+                finish();
             }
         });
 

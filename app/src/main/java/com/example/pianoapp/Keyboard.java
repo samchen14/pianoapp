@@ -341,7 +341,7 @@ public class Keyboard extends AppCompatActivity {
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        secondcsharp.setBackgroundColor(wColor);
+                        secondcsharp.setBackgroundColor(bColor);
                         break;
                     default:
                 }
@@ -377,7 +377,7 @@ public class Keyboard extends AppCompatActivity {
                                 0, 0, 1);
                         break;
                     case MotionEvent.ACTION_UP:
-                        seconddsharp.setBackgroundColor(wColor);
+                        seconddsharp.setBackgroundColor(bColor);
                         break;
                     default:
                 }
